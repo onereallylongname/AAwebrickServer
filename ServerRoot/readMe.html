@@ -1,0 +1,285 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="goto" id="home"></a>
+  <div id="navbar">
+    <a class="navbaritem active" href="#home">How to Use</a>
+    <a class="navbaritem" href="#templateIN">Installation Notes Template</a>
+    <a class="navbaritem" href="#services">Services</a>
+    <a class="navbaritem" href="#startserver">Start server</a>
+    <a class="navbaritem" href="#reconfigureserver">Reconfigure server</a>
+    <a class="navbaritem" href="#shutdown">Shutdown</a>
+    <a class="navbaritem" href="/">Login</a>
+  </div>
+
+  <h1 id="howtouse">How to use</h1>
+
+  <a class="goto" id="templateIN"></a>
+  <h2>Installation Notes Template</h2>
+  <h3>Celfocus</h3>
+  <div class="mycontainer">
+    <div class="container" title="Hint: double-click to select code">
+      <div class="line number1 index0 alt2"><code class="text plain">RX.XX.XX.X:</code></div>
+      <div class="line number2 index1 alt1"><code class="text spaces">&nbsp;</code><code class="text plain">Type: &lt;Release Features/Enhancements/Fixes&gt;</code></div>
+      <div class="line number3 index2 alt2"><code class="text spaces">&nbsp;</code><code class="text plain">Runbooks:</code></div>
+      <div class="line number4 index3 alt1"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">- XXX</code></div>
+      <div class="line number5 index4 alt2"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">- XXX</code></div>
+      <div class="line number6 index5 alt1"><code class="text spaces">&nbsp;</code><code class="text plain">Action Tasks:</code></div>
+      <div class="line number7 index6 alt2"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">- XXX</code></div>
+      <div class="line number8 index7 alt1"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">- XXX</code></div>
+      <div class="line number9 index8 alt2"><code class="text spaces">&nbsp;</code><code class="text plain">Properties:</code></div>
+      <div class="line number10 index9 alt1"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">- XXX</code></div>
+      <div class="line number11 index10 alt2"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">- XXX</code></div>
+      <div class="line number12 index11 alt1"><code class="text spaces">&nbsp;</code><code class="text plain">Gateway Filters:</code></div>
+      <div class="line number13 index12 alt2"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">- XXX</code></div>
+      <div class="line number14 index13 alt1"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">- XXX</code></div>
+      <div class="line number15 index14 alt2"><code class="text spaces">&nbsp;</code><code class="text plain">Job Schedulers:</code></div>
+      <div class="line number16 index15 alt1"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">- XXX </code></div>
+      <div class="line number17 index16 alt2"><code class="text spaces">&nbsp;</code><code class="text plain">DB Scripts:</code></div>
+      <div class="line number18 index17 alt1"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">&lt;SchemaName&gt;:</code></div>
+      <div class="line number19 index18 alt2"><code class="text spaces">&nbsp;&nbsp;&nbsp;</code><code class="text plain">DDL:</code></div>
+      <div class="line number20 index19 alt1"><code class="text spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="text plain">- XXX</code></div>
+      <div class="line number21 index20 alt2"><code class="text spaces">&nbsp;&nbsp;&nbsp;</code><code class="text plain">DML: </code></div>
+      <div class="line number22 index21 alt1"><code class="text spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="text plain">- XXX </code></div>
+      <div class="line number23 index22 alt2"><code class="text spaces">&nbsp;</code><code class="text plain">Gateway Filters:</code></div>
+      <div class="line number24 index23 alt1"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">- XXX</code></div>
+      <div class="line number25 index24 alt2"><code class="text spaces">&nbsp;</code><code class="text plain">Instructions: </code></div>
+      <div class="line number26 index25 alt1"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">- &lt;instructions text 1 for the release.&gt;</code></div>
+      <div class="line number27 index26 alt2"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">- &lt;instructions text 2 for the release.&gt; </code></div>
+      <div class="line number28 index27 alt1"><code class="text spaces">&nbsp;</code><code class="text plain">Upgrades:</code></div>
+      <div class="line number29 index28 alt2"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">- &lt;upgrades text 1 for the release.&gt;</code></div>
+      <div class="line number30 index29 alt1"><code class="text spaces">&nbsp;</code><code class="text plain">Problems:</code></div>
+      <div class="line number31 index30 alt2"><code class="text spaces">&nbsp;&nbsp;</code><code class="text plain">- &lt;problems text 1 for the release.&gt;</code></div>
+    </div>
+  </div>
+  <h3>Vodafone</h3>
+  <div class="mycontainer">
+    TBD
+  </div>
+
+  <a class="goto" id="services"></a>
+  <h2>Services</h2>
+  <div class="mycontainer">
+  <ol>
+  <li>Static server</li>
+  </ol>
+
+  <ul>
+  <li>Serve any static file present in the RootDir.</li>
+  </ul>
+
+  <ol>
+  <li>REST, for Jira Release Management</li>
+  </ol>
+
+  <ul>
+  <li>'&lt; service path><b>/test</b>'
+
+
+  <ul>
+  <li>Test</li></ul>
+  </li>
+
+  <li>'&lt; service path><b>/get/pid?id=&lt; valid id></b>'
+
+
+  <ul>
+  <li>Get server process id.</li></ul>
+  </li>
+
+  <li>'&lt; service path><b>/restart?id=&lt; valid id></b>'
+
+
+  <ul>
+  <li>Restart server. WARNING : This will not produce a response! All sessions will be lost.</li></ul>
+  </li>
+
+  <li>'&lt; service path><b>/sessions/get?id=&lt; valid id></b>'
+
+
+  <ul>
+  <li>Get all sessions.</li></ul>
+  </li>
+
+  <li>'&lt; service path><b>/sessions/get?id=&lt; valid id>&amp;getId=&lt; session id to get></b>'
+
+
+  <ul>
+  <li>Get one session id sessions.</li></ul>
+  </li>
+
+  <li>'&lt; service path><b>/jira/get/release?id=&lt; valid id>&amp;release=<release\></b>'
+<!--Code By António Almeida-->
+
+  <ul>
+  <li>Can only be called after a successful jira login.</li>
+
+  <li>Query Jira for the release (for one component), and load relevant information to memory.</li></ul>
+  </li>
+
+  <li>'&lt; service path><b>/jira/get/info/confluence?id=&lt; valid id></b>'
+
+
+  <ul>
+  <li>Can only be called after a successful get release.</li>
+
+  <li>Get text for Confluence.</li></ul>
+  </li>
+
+  <li>'&lt; service path><b>/jira/get/info/jira?id=&lt; valid id></b>'
+
+
+  <ul>
+  <li>Can only be called after a successful get release.</li>
+
+  <li>Get text for Jira release issue.</li></ul>
+  </li>
+
+  <li>'&lt; service path><b>/jira/get/info/release?id=&lt; valid id></b>'
+
+
+  <ul>
+  <li>Can only be called after a successful get release.</li>
+
+  <li>Get list summarizing issues for Release.</li></ul>
+  </li>
+
+  <li>'&lt; service path><b>/jira/get/info/resolve?id=&lt; valid id></b>'
+
+
+  <ul>
+  <li>Can only be called after a successful get release.</li>
+
+  <li>Get list of artefacts to deliver.</li></ul>
+  </li>
+
+  <li>'&lt; service path><b>/jira/get/info/warning?id=&lt; valid id></b>'
+
+
+  <ul>
+  <li>Can only be called after a successful get release.</li>
+
+  <li>Get list of warnings for release manager.</li></ul>
+  </li>
+
+  <li>'&lt; service path><b>/login?id=&lt; id to set as session key></b>'
+
+
+  <ul>
+  <li>The id sent will be your session key.</li></ul>
+  </li>
+
+  <li>'&lt; service path><b>/jira/login?id=&lt; id to set as session key>&amp;jiraUser=&lt; valid jira user>&amp;jiraPass=&lt; valid jira password>&amp;jiraOwner=&lt; owner : Celfocus / Vodafone></b>''
+
+
+  <ul>
+  <li>The id sent will be your session key.</li>
+
+  <li>jiraUser and jiraPass must be you jira credentials.</li></ul>
+  </li>
+  </li>
+<!--Code By António Almeida-->
+  <li></b>'&lt; service path><b>/logout?id=&lt; valid session id></b>''
+
+
+  <ul>
+  <li>The session with the id sent will be terminated, if the session request is valid.</li></ul>
+  </li>
+  </ul>
+  </div>
+  <a class="goto" id="startserver"></a>
+  <h2>Start server</h2>
+  <div class="mycontainer">
+  <ol>
+  <li>Install Ruby</li>
+
+  <li>Set you configurations in the Config.yml file</li>
+  </ol>
+
+  <ul>
+  <li>Be careful when editing the file! Deleting a configuration will result cause errors in the code.</li>
+  </ul>
+
+  <ol>
+  <li>Run command 'ruby webrickServer.rb'
+
+
+  <ul>
+  <li>If you're not currently in the 'webrickServerJira' folder run 'ruby <path to folder>/webrickServer.rb'</li></ul>
+  </li>
+  </ol>
+  </div>
+  <a class="goto" id="reconfigureserver"></a>
+  <h2>Reconfigure server</h2>
+  <div class="mycontainer">
+  <p><strong>If all is Ok</strong></p>
+
+  <ol>
+  <li>Change Config.yml</li>
+
+  <li>Use restart service '&lt;host>:&lt;port>&lt;service path>restart?id=&lt; your session id>'</li>
+  </ol>
+
+  <p><strong>If you need to force a restart</strong></p>
+
+  <ol>
+  <li>Change Config.yml</li>
+
+  <li>Go to log files
+
+
+  <ol>
+  <li>Search for last line containing 'INFO  WEBrick::HTTPServer#start:'</li>
+
+  <li>In that line you can find the pid of the process</li></ol>
+  </li>
+
+  <li>Kill the process</li>
+  </ol>
+
+  <ul>
+  <li>Windows: Taskkill /PID <pid\> /F</li>
+
+  <li>Linux: kill -9 <pid\></li>
+  </ul>
+
+  <ol>
+  <li>Run the command 'ruby webrickServer.rb'</li>
+  </ol>
+  </div>
+  <a class="goto" id="shutdown"></a>
+  <h2>Shutdown server</h2>
+  <div class="mycontainer">
+  <p><strong>If all is Ok</strong></p>
+<!--Code by António   Almeida-->
+  <ol>
+
+  <li>Use restart service '&lt;host>:&lt;port>&lt;service path>shutdown?id=&lt; your session id>'</li>
+  </ol>
+
+  <p><strong>If you need to force a Shutdown</strong></p>
+
+  <ol>
+
+  <li>Search for last line containing 'INFO  WEBrick::HTTPServer#start:'</li>
+
+  <li>In that line you can find the pid of the process</li>
+
+
+  <li>Kill the process</li>
+  </ol>
+
+  <ul>
+  <li>Windows: Taskkill /PID <pid\> /F</li>
+
+  <li>Linux: kill -9 <pid\></li>
+  </ul>
+  </div>
+  <script type="text/javascript" src='js/handleNavbar.js'></script>
+  <footer>Code By António Almeida</footer>
+</body>
+<!--Code By António Almeida-->
+</html>

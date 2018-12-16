@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: AAJira
+  
+    &mdash; Documentation by YARD 0.9.16
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "AAJira";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (A)</a> &raquo;
+    
+    
+    <span class="title">AAJira</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: AAJira
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">AAJira</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/aaServer/AAJira.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="lastError-classvariable" class="">@@lastError =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="configs-classvariable" class="">@@configs =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Defaul configs</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Celfocus</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span>
+  <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Site</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://celfocusjira.atlassian.net:443</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ProjectName</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>VFGBNOCCIA</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Component</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Automation</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>QueryFields</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span>
+    <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>installationNotes</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>customfield_10066</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>summary</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>summary</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>issuetype</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>issuetype</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>assignee</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>assignee</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NewLineChar</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DeployStatus</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Resolved</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Ready For Deploy</span><span class='tstring_end'>&#39;</span></span>
+      <span class='rbracket'>]</span><span class='comma'>,</span>
+     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Deliverables</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
+       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Runbooks</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Action Tasks</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Properties</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Gateway Filters</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Job Schedulers</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DB Scripts</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Gateway Filters</span><span class='tstring_end'>&#39;</span></span>
+     <span class='rbracket'>]</span><span class='comma'>,</span>
+     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ResolveDeliverables</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span><span class='lbracket'>[</span>
+       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Runbooks</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Action Tasks</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Properties</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+     <span class='rbracket'>]</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+ <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Vodafone</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span>
+  <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Site</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://cias.jira.agile.vodafone.com:443</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ProjectName</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CIAS</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span>
+<span class='rbrace'>}</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#configs-class_method" title="configs (class method)">.<strong>configs</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get configurations.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#configs=-class_method" title="configs= (class method)">.<strong>configs=</strong>(conf)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Set configurations.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_query_list-class_method" title="get_query_list (class method)">.<strong>get_query_list</strong>(client, jiraOwnerName, fixVersion)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Query jira for release objects.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lastError-class_method" title="lastError (class method)">.<strong>lastError</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Read lastError.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#login-class_method" title="login (class method)">.<strong>login</strong>(jiraUser, jiraPass, jiraOwner)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>login to jira and corfirm credentials.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#make_confluence_text-class_method" title="make_confluence_text (class method)">.<strong>make_confluence_text</strong>(releaseList, jiraOwnerName, useWarn)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Make confluence text.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#make_deliverables_text-class_method" title="make_deliverables_text (class method)">.<strong>make_deliverables_text</strong>(releaseList, jiraOwnerName, useWarn)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Make resolve text.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#make_jira_text-class_method" title="make_jira_text (class method)">.<strong>make_jira_text</strong>(releaseList, jiraOwnerName, useWarn)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Make release jira text.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#make_release_text-class_method" title="make_release_text (class method)">.<strong>make_release_text</strong>(releaseList, jiraOwnerName, useWarn)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Make release text.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#make_warning_text-class_method" title="make_warning_text (class method)">.<strong>make_warning_text</strong>(releaseList, jiraOwnerName, useWarn)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Make warning text.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="configs-class_method">
+  
+    .<strong>configs</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get configurations</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aaServer/AAJira.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_configs'>configs</span>
+  <span class='cvar'>@@configs</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="configs=-class_method">
+  
+    .<strong>configs=</strong>(conf)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Set configurations</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aaServer/AAJira.rb', line 48</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_configs='>configs=</span> <span class='lparen'>(</span><span class='id identifier rubyid_conf'>conf</span><span class='rparen'>)</span>
+  <span class='cvar'>@@configs</span> <span class='op'>=</span> <span class='id identifier rubyid_conf'>conf</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_query_list-class_method">
+  
+    .<strong>get_query_list</strong>(client, jiraOwnerName, fixVersion)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Query jira for release objects</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aaServer/AAJira.rb', line 97</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_query_list'>get_query_list</span> <span class='id identifier rubyid_client'>client</span><span class='comma'>,</span> <span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='comma'>,</span> <span class='id identifier rubyid_fixVersion'>fixVersion</span>
+  <span class='id identifier rubyid_queryVals'>queryVals</span> <span class='op'>=</span> <span class='cvar'>@@configs</span><span class='lbracket'>[</span><span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>QueryFields</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_fields'>fields</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='comment'># [status, installationNotes, summary, issuetype, assignee]
+</span>  <span class='id identifier rubyid_fields'>fields</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_queryVals'>queryVals</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>status</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>  <span class='comment'>#status
+</span>  <span class='id identifier rubyid_fields'>fields</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_queryVals'>queryVals</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>installationNotes</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Value</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span> <span class='comment'>#installationNotes
+</span>  <span class='id identifier rubyid_fields'>fields</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_queryVals'>queryVals</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>summary</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span> <span class='comment'>#summary
+</span>  <span class='id identifier rubyid_fields'>fields</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_queryVals'>queryVals</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>issuetype</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span> <span class='comment'># issuetype
+</span>  <span class='id identifier rubyid_fields'>fields</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_queryVals'>queryVals</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>assignee</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span> <span class='comment'># assignee
+</span>  <span class='id identifier rubyid_component'>component</span> <span class='op'>=</span> <span class='cvar'>@@configs</span><span class='lbracket'>[</span><span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Component</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+  <span class='id identifier rubyid_site'>site</span> <span class='op'>=</span> <span class='cvar'>@@configs</span><span class='lbracket'>[</span><span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Site</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_list'>list</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_list'>list</span> <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='const'>Issue</span><span class='period'>.</span><span class='id identifier rubyid_jql'>jql</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>fixVersion = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_fixVersion'>fixVersion</span><span class='embexpr_end'>}</span><span class='tstring_content'> and component = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component'>component</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>fields:</span> <span class='id identifier rubyid_fields'>fields</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='comment'># Debug
+</span>  <span class='comment'>#  p e.response.header
+</span>
+    <span class='cvar'>@@lastError</span> <span class='op'>=</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unable to connect to Jira. Jira header: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='embexpr_end'>}</span><span class='tstring_content'> Jira Body</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>return</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_jiraHash'>jiraHash</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_issue'>issue</span><span class='op'>|</span>
+  <span class='id identifier rubyid_installationNotes'>installationNotes</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='kw'>begin</span>
+      <span class='id identifier rubyid_thing1'>thing1</span> <span class='op'>=</span> <span class='const'>YAML</span><span class='period'>.</span><span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span><span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span><span class='lbracket'>[</span><span class='id identifier rubyid_queryVals'>queryVals</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>installationNotes</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Value</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_installationNotes'>installationNotes</span> <span class='op'>=</span> <span class='id identifier rubyid_thing1'>thing1</span><span class='lbracket'>[</span><span class='id identifier rubyid_fixVersion'>fixVersion</span><span class='rbracket'>]</span>
+    <span class='kw'>rescue</span>
+      <span class='id identifier rubyid_installationNotes'>installationNotes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Type</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>error</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>YAML failed! Unable to parse Installation Notes.</span><span class='tstring_end'>&#39;</span></span><span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_jiraHash'>jiraHash</span><span class='lbracket'>[</span><span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='id identifier rubyid_queryVals'>queryVals</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>assignee</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span><span class='lbracket'>[</span><span class='id identifier rubyid_queryVals'>queryVals</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>assignee</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_queryVals'>queryVals</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>summary</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='op'>=&gt;</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span><span class='lbracket'>[</span><span class='id identifier rubyid_queryVals'>queryVals</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>summary</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_queryVals'>queryVals</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>issuetype</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='op'>=&gt;</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span><span class='lbracket'>[</span><span class='id identifier rubyid_queryVals'>queryVals</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>issuetype</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_queryVals'>queryVals</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>status</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span><span class='lbracket'>[</span><span class='id identifier rubyid_queryVals'>queryVals</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>status</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>url</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_site'>site</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/browse/</span><span class='tstring_end'>&#39;</span></span><span class='op'>+</span><span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>installationNotes</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_installationNotes'>installationNotes</span><span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_jiraFinalHash'>jiraFinalHash</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>release</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_fixVersion'>fixVersion</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>list</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_jiraHash'>jiraHash</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_jiraFinalHash'>jiraFinalHash</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lastError-class_method">
+  
+    .<strong>lastError</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Read lastError</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aaServer/AAJira.rb', line 58</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_lastError'>lastError</span>
+  <span class='id identifier rubyid_lastError'>lastError</span> <span class='op'>=</span> <span class='cvar'>@@lastError</span>
+  <span class='cvar'>@@lastError</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_lastError'>lastError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="login-class_method">
+  
+    .<strong>login</strong>(jiraUser, jiraPass, jiraOwner)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>login to jira and corfirm credentials</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aaServer/AAJira.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_login'>login</span><span class='lparen'>(</span><span class='id identifier rubyid_jiraUser'>jiraUser</span><span class='comma'>,</span> <span class='id identifier rubyid_jiraPass'>jiraPass</span><span class='comma'>,</span> <span class='id identifier rubyid_jiraOwner'>jiraOwner</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='cvar'>@@configs</span><span class='lbracket'>[</span><span class='id identifier rubyid_jiraOwner'>jiraOwner</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='cvar'>@@lastError</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid jiraOwner.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>return</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_projectName'>projectName</span> <span class='op'>=</span> <span class='cvar'>@@configs</span><span class='lbracket'>[</span><span class='id identifier rubyid_jiraOwner'>jiraOwner</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ProjectName</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+  <span class='comment'># create Jira client options
+</span>  <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:username</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_jiraUser'>jiraUser</span><span class='comma'>,</span>
+    <span class='symbol'>:password</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_jiraPass'>jiraPass</span><span class='comma'>,</span>
+    <span class='symbol'>:site</span>         <span class='op'>=&gt;</span> <span class='cvar'>@@configs</span><span class='lbracket'>[</span><span class='id identifier rubyid_jiraOwner'>jiraOwner</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Site</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='symbol'>:context_path</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:auth_type</span>    <span class='op'>=&gt;</span> <span class='symbol'>:basic</span>
+  <span class='rbrace'>}</span>
+  <span class='comment'># create Jira client and test user
+</span>  <span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'>JIRA</span><span class='op'>::</span><span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='kw'>begin</span>
+    <span class='comment'>#test connection and credentials
+</span>    <span class='id identifier rubyid_test'>test</span> <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='const'>Issue</span><span class='period'>.</span><span class='id identifier rubyid_jql'>jql</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>key = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_projectName'>projectName</span><span class='embexpr_end'>}</span><span class='tstring_content'>-1</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>fields:</span><span class='lbracket'>[</span><span class='symbol'>:summary</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='comment'># Debug
+</span>  <span class='comment'>#  p e.response.header
+</span>
+    <span class='cvar'>@@lastError</span> <span class='op'>=</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unable to connect to Jira. Jira header: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='embexpr_end'>}</span><span class='tstring_content'> Jira Body</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>return</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_client'>client</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="make_confluence_text-class_method">
+  
+    .<strong>make_confluence_text</strong>(releaseList, jiraOwnerName, useWarn)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Make confluence text</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aaServer/AAJira.rb', line 134</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_make_confluence_text'>make_confluence_text</span> <span class='id identifier rubyid_releaseList'>releaseList</span><span class='comma'>,</span> <span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='comma'>,</span> <span class='id identifier rubyid_useWarn'>useWarn</span>
+  <span class='id identifier rubyid_nlc'>nlc</span> <span class='op'>=</span> <span class='cvar'>@@configs</span><span class='lbracket'>[</span><span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NewLineChar</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='cvar'>@@configs</span><span class='lbracket'>[</span><span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NewLineChar</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_warnings'>warnings</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>keys</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_warnings'>warnings</span> <span class='op'>=</span> <span class='id identifier rubyid_make_warning_text'>make_warning_text</span> <span class='id identifier rubyid_releaseList'>releaseList</span><span class='comma'>,</span> <span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='comma'>,</span> <span class='id identifier rubyid_useWarn'>useWarn</span> <span class='kw'>if</span> <span class='id identifier rubyid_useWarn'>useWarn</span>
+  <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_releaseFeatures'>releaseFeatures</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='comment'># &quot;#{nlc}Release Features#{nlc}#{nlc}&quot;
+</span>  <span class='id identifier rubyid_enhancements'>enhancements</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='comment'># &quot;#{nlc}Enhancements#{nlc}#{nlc}&quot;
+</span>  <span class='id identifier rubyid_fixes'>fixes</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='comment'># &quot;#{nlc}Fixes#{nlc}#{nlc}&quot;
+</span>  <span class='id identifier rubyid_problems'>problems</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='comment'># &quot;#{nlc}Known Issues and Problems#{nlc}#{nlc}&quot;
+</span>  <span class='id identifier rubyid_upgrades'>upgrades</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='comment'># &quot;#{nlc}Technical Upgrades#{nlc}#{nlc}&quot;
+</span>  <span class='id identifier rubyid_installationInformation'>installationInformation</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='comment'># &quot;#{nlc}Installation Information#{nlc}#{nlc}&quot;
+</span>  <span class='id identifier rubyid_tempLastError'>tempLastError</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_releaseList'>releaseList</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>list</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_warnings'>warnings</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>keys</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_useWarn'>useWarn</span>
+      <span class='id identifier rubyid_tempLastError'>tempLastError</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>next</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>installationNotes</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Type</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+      <span class='kw'>case</span> <span class='id identifier rubyid_type'>type</span>
+      <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Release Features</span><span class='tstring_end'>&#39;</span></span>
+        <span class='id identifier rubyid_releaseFeatures'>releaseFeatures</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>summary</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Enhancements</span><span class='tstring_end'>&#39;</span></span>
+        <span class='id identifier rubyid_enhancements'>enhancements</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>summary</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Fixes</span><span class='tstring_end'>&#39;</span></span>
+        <span class='id identifier rubyid_fixes'>fixes</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>summary</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_tempLastError'>tempLastError</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_inst'>inst</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>installationNotes</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Instructions</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_inst'>inst</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>  <span class='id identifier rubyid_installationInformation'>installationInformation</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_inst'>inst</span>
+      <span class='id identifier rubyid_prob'>prob</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>installationNotes</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Problems</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_prob'>prob</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>  <span class='id identifier rubyid_problems'>problems</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_prob'>prob</span>
+      <span class='id identifier rubyid_upda'>upda</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>installationNotes</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Upgrades</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_upda'>upda</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>  <span class='id identifier rubyid_upgrades'>upgrades</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_upda'>upda</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_tempLastError'>tempLastError</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='cvar'>@@lastError</span> <span class='op'>=</span> <span class='op'>!</span><span class='id identifier rubyid_tempLastError'>tempLastError</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>?</span> <span class='id identifier rubyid_tempLastError'>tempLastError</span> <span class='op'>:</span> <span class='cvar'>@@lastError</span>
+  <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Release Features</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_releaseFeatures'>releaseFeatures</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Enhancements</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_enhancements'>enhancements</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Fixes</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_fixes'>fixes</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Known Issues and Problems</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_problems'>problems</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Technical Upgrades</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_upgrades'>upgrades</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Installation Information</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_installationInformation'>installationInformation</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="make_deliverables_text-class_method">
+  
+    .<strong>make_deliverables_text</strong>(releaseList, jiraOwnerName, useWarn)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Make resolve text</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aaServer/AAJira.rb', line 204</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_make_deliverables_text'>make_deliverables_text</span> <span class='id identifier rubyid_releaseList'>releaseList</span><span class='comma'>,</span> <span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='comma'>,</span> <span class='id identifier rubyid_useWarn'>useWarn</span>
+  <span class='id identifier rubyid_warnings'>warnings</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>keys</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_warnings'>warnings</span> <span class='op'>=</span> <span class='id identifier rubyid_make_warning_text'>make_warning_text</span> <span class='id identifier rubyid_releaseList'>releaseList</span><span class='comma'>,</span> <span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='comma'>,</span> <span class='id identifier rubyid_useWarn'>useWarn</span> <span class='kw'>if</span> <span class='id identifier rubyid_useWarn'>useWarn</span>
+  <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Warnings</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_jiraKeys'>jiraKeys</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_releaseList'>releaseList</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>list</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+    <span class='id identifier rubyid_jiraKeys'>jiraKeys</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_k'>k</span>
+    <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_warnings'>warnings</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>keys</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_k'>k</span> <span class='kw'>and</span> <span class='id identifier rubyid_useWarn'>useWarn</span>
+    <span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>installationNotes</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_field'>field</span><span class='comma'>,</span> <span class='id identifier rubyid_list'>list</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='cvar'>@@configs</span><span class='lbracket'>[</span><span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Deliverables</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_field'>field</span>
+        <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_field'>field</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>artifacts</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>issueKeys</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_field'>field</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
+          <span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_obj'>obj</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_field'>field</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>artifacts</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_obj'>obj</span>
+              <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_field'>field</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>artifacts</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_obj'>obj</span>
+              <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_field'>field</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>issueKeys</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_k'>k</span>
+            <span class='kw'>end</span>
+          <span class='kw'>end</span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span>
+          <span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_obj'>obj</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_field'>field</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>artifacts</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_obj'>obj</span>
+              <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_field'>field</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>artifacts</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_obj'>obj</span>
+              <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_field'>field</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>issueKeys</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_k'>k</span>
+            <span class='kw'>end</span>
+          <span class='kw'>end</span>
+        <span class='kw'>else</span>
+          <span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_obj'>obj</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_field'>field</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>artifacts</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_obj'>obj</span>
+              <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_field'>field</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>artifacts</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_obj'>obj</span>
+              <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_field'>field</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>issueKeys</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_k'>k</span>
+            <span class='kw'>end</span>
+          <span class='kw'>end</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_emptyText'>emptyText</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_jiraKeys'>jiraKeys</span> <span class='op'>==</span> <span class='id identifier rubyid_warnings'>warnings</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>keys</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='comment'>#text.each{|k,v| text[k] = v.uniq; emptyText = emptyText &amp;&amp; text[k].empty?}
+</span>  <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Warnings</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>artifacts</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>No valid artifacts were found. Try checking Warnings for more info.</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_emptyText'>emptyText</span>
+  <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Warnings</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>issueKeys</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_emptyText'>emptyText</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_text'>text</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="make_jira_text-class_method">
+  
+    .<strong>make_jira_text</strong>(releaseList, jiraOwnerName, useWarn)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Make release jira text</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aaServer/AAJira.rb', line 178</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_make_jira_text'>make_jira_text</span> <span class='id identifier rubyid_releaseList'>releaseList</span><span class='comma'>,</span> <span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='comma'>,</span> <span class='id identifier rubyid_useWarn'>useWarn</span>
+  <span class='id identifier rubyid_nlc'>nlc</span> <span class='op'>=</span> <span class='cvar'>@@configs</span><span class='lbracket'>[</span><span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NewLineChar</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='cvar'>@@configs</span><span class='lbracket'>[</span><span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NewLineChar</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_warnings'>warnings</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>keys</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_warnings'>warnings</span> <span class='op'>=</span> <span class='id identifier rubyid_make_warning_text'>make_warning_text</span> <span class='id identifier rubyid_releaseList'>releaseList</span><span class='comma'>,</span> <span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='comma'>,</span> <span class='id identifier rubyid_useWarn'>useWarn</span> <span class='kw'>if</span> <span class='id identifier rubyid_useWarn'>useWarn</span>
+  <span class='id identifier rubyid_hashText'>hashText</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_content'>Jiras delivered:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_tempLastError'>tempLastError</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_releaseList'>releaseList</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>list</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_warnings'>warnings</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>keys</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_useWarn'>useWarn</span>
+      <span class='id identifier rubyid_tempLastError'>tempLastError</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>next</span>
+    <span class='kw'>end</span>
+      <span class='id identifier rubyid_text'>text</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='cvar'>@@lastError</span> <span class='op'>=</span> <span class='op'>!</span><span class='id identifier rubyid_tempLastError'>tempLastError</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>?</span> <span class='id identifier rubyid_tempLastError'>tempLastError</span> <span class='op'>:</span> <span class='cvar'>@@lastError</span>
+  <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Release </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_releaseList'>releaseList</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>release</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_hashText'>hashText</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_text'>text</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_hashText'>hashText</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="make_release_text-class_method">
+  
+    .<strong>make_release_text</strong>(releaseList, jiraOwnerName, useWarn)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Make release text</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+199
+200
+201</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aaServer/AAJira.rb', line 199</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_make_release_text'>make_release_text</span> <span class='id identifier rubyid_releaseList'>releaseList</span><span class='comma'>,</span> <span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='comma'>,</span> <span class='id identifier rubyid_useWarn'>useWarn</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_releaseList'>releaseList</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="make_warning_text-class_method">
+  
+    .<strong>make_warning_text</strong>(releaseList, jiraOwnerName, useWarn)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Make warning text</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aaServer/AAJira.rb', line 249</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_make_warning_text'>make_warning_text</span> <span class='id identifier rubyid_releaseList'>releaseList</span><span class='comma'>,</span> <span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='comma'>,</span> <span class='id identifier rubyid_useWarn'>useWarn</span>
+  <span class='id identifier rubyid_nlc'>nlc</span> <span class='op'>=</span> <span class='cvar'>@@configs</span><span class='lbracket'>[</span><span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NewLineChar</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='cvar'>@@configs</span><span class='lbracket'>[</span><span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NewLineChar</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>keys</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_tempLastError'>tempLastError</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_releaseList'>releaseList</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>list</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>installationNotes</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Type</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>assignee</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>assignee</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_typeOk'>typeOk</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Release Features</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Enhancements</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Fixes</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_type'>type</span>
+    <span class='id identifier rubyid_statusOk'>statusOk</span> <span class='op'>=</span> <span class='cvar'>@@configs</span><span class='lbracket'>[</span><span class='id identifier rubyid_jiraOwnerName'>jiraOwnerName</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DeployStatus</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>status</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='op'>!</span><span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>installationNotes</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>error</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>assignee</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_content'> - Incorrect type : &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_typeOk'>typeOk</span>
+    <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>assignee</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_content'> - </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>installationNotes</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>error</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_error'>error</span>
+    <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>assignee</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_content'> - Incorrect status : &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>status</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; is not deploy ready.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nlc'>nlc</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_statusOk'>statusOk</span>
+    <span class='id identifier rubyid_text'>text</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>keys</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_typeOk'>typeOk</span> <span class='kw'>or</span> <span class='op'>!</span><span class='id identifier rubyid_statusOk'>statusOk</span> <span class='kw'>or</span> <span class='id identifier rubyid_error'>error</span>
+  <span class='kw'>end</span>
+  <span class='cvar'>@@lastError</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_text'>text</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Dec 14 16:54:18 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.16 (ruby-2.5.3).
+</div>
+
+    </div>
+  </body>
+</html>

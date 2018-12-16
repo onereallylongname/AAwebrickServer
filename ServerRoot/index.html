@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src='js/ajaxRequest.js'></script>
+  <script type="text/javascript" src='js/utils.js'></script>
+  <script type="text/javascript" >
+  //  let id=null;
+    function submitLogin(){
+      document.getElementById("submitButton").disabled = true
+      var myForm = document.getElementById("myForm");
+      //Extract Each Element Value
+      let username = document.getElementById("submitButton").innerHTML
+      let password = document.getElementById("submitButton").innerHTML
+      let owner = document.getElementById("submitButton").Value
+      for (var i = 0; i < myForm.elements.length; i++) {
+        if(myForm.elements[i].type == 'radio' && myForm.elements[i].checked){
+          owner = myForm.elements[i].value;
+        }else if(myForm.elements[i].type == 'text'){
+          username = myForm.elements[i].value;
+        }else if(myForm.elements[i].type == 'password'){
+          password = myForm.elements[i].value;
+        }
+      }
+      console.log(username, password, owner);
+
+      ajaxJsonRequest(callNextPage, callLoginUrl(username, password, owner));
+    }
+
+    function callLoginUrl(username, password, owner){
+      let id = randomString(50, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-')
+      console.log(id);
+      return '/services/rest/jira/login?id='+id+'&jiraUser='+username+'&jiraPass='+password+'&jiraOwner='+owner
+    }
+
+    let callNextPage = function (jsonResponse){
+      if (jsonResponse.hasOwnProperty('error') || !jsonResponse.hasOwnProperty('id')){
+        alert('Login failled!');
+        console.log(jsonResponse);
+        document.getElementById("submitButton").disabled = false
+      }else{
+        window.location = "ReleaseManagerHelper.html?id="+jsonResponse.id
+      }
+
+
+    }
+/*<!--Code by António   Almeida-->
+    window.onload = function(e){
+      id=randomString(50, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+-')
+    }
+*/
+  </script>
+</head>
+
+<body>
+  <h2>Login Form for Release Manager Helper (using Jira)</h2>
+
+  <form class="mycontainer" id="myForm" action="javascript:submitLogin()">
+    <div class="imgcontainer">
+      <img src="release_logo.png" alt="Avatar" height="42px" width="42px">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button id='submitButton' type="submit">Login</button>
+      <!-- <button id='submitButton' type="button" onclick="submitLogin()">Login</button> -->
+      <input type="radio" Value="Celfocus" name="owner" checked="checked" required> Celfocus
+      <input type="radio" Value="Vodafone" name="owner" required> Vodafone
+    </div>
+  </form>
+
+  <h2>Useful links</h2>
+  <div class="mycontainer">
+    <a href="readMe.html">Using the server</a><br>
+    <a href="https://celfocusconfluence.atlassian.net/wiki/spaces/CFNOCCIA/pages/892963906/4.4.2.2.10.2+Releases+-+Best+Practices">Release Best Practices (Celfocus)</a><br>
+    <a href="https://jsonformatter.org/yaml-validator" target="_blank">YAML Validator</a>
+  </div>
+  <!-- </form> -->
+<!--Code by António   Almeida-->
+</body>
+<footer>Code By António Almeida</footer>
+</html>

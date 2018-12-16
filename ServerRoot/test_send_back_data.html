@@ -1,0 +1,40 @@
+
+
+<HTML>
+
+<HEAD>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+  <script type="text/javascript" src='js/ajaxRequest.js'></script>
+  <script type="text/javascript">
+    let url = "services/rest";
+    function sendPost(){
+      let text = document.getElementById('sendTxt').value;
+      ajaxJsonRequest(processResponse, url, "POST", text)
+    }
+
+    function processResponse(json){
+      console.log(json);
+    }
+/*
+    function sendPost(){
+      let text = document.getElementById('sendTxt').value;
+      var blob = new Blob([text], {type: 'text/plain'});
+      var oReq = new XMLHttpRequest();
+      oReq.open("POST", url, true);
+      oReq.onload = function (oEvent) {
+        console.log('Uploaded');
+        console.log(oEvent);
+      };
+      oReq.send(blob);
+    }
+*/
+  </script>
+</HEAD>
+<BODY>
+
+hello
+<button type="button" name="button" onclick="sendPost()">Test</button>
+<input id="sendTxt" type="text" name="" value="">
+
+</body>
+</html>
