@@ -7,20 +7,26 @@ Server:
  PkeyDir: './Cert/pkey.pem'
  LoggingLevel: 'DEBUG'         # Logging level, possible values are: 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FATAL'
  AccessLogFile: './Logs/webrickServerAccess.log' # Logging Access file
- LogFile: './Logs/webrickServer.log' # Logging file
+ ServerLogFile: './Logs/webrickServer.log' # Logging file
  Port: 41582                  # Server Port
- RestPath: '/services/rest'   # Path (in the Url) to acess the REST services
+ ServicesPath:
+   Rest: '/services/rest'     # Path (in the Url) to acess the REST services
+ MonitorInterval: 5           # Number of secs between cleaning routines
 # Session Configurations
 Session:
  TimeToLive: 3600             # Time in seconds to kill the session after last interaction
- TimeOfinactivity: 360        # Number of secs between cleaning routines
  MaxSessions: 10              # Maximum number of sessions, ignoring master sessions
  LogFile: './Logs/Sessions.log' # Logging sessions file
  Masters:                     # Master sessions, the ip's in this list have special permissions. Can open a session even if the maximum number of sessions as already been reached.
    - '172.16.2.113'
    - '::1'
-# Jira Configurations
-Jira:
+Tools:                        # Tools are custom to each implementation os the server
+ Resolve:
+   Deliverables:
+     - 'Runbooks'
+     - 'Action Tasks'
+     - 'Properties'
+ Jira:                        # Jira Configurations
   Celfocus:                   # Config for Celfocus Releases
     Site: 'https://celfocusjira.atlassian.net:443'
     ProjectName: 'VFGBNOCCIA'
@@ -46,9 +52,3 @@ Jira:
   Vodafone:                 # Config for Vodafone Releases
     Site: 'https://cias.jira.agile.vodafone.com:443'
     ProjectName: 'CIAS'
-Tools:
-  Resolve:
-    Deliverables:
-      - 'Runbooks'
-      - 'Action Tasks'
-      - 'Properties'

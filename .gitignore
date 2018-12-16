@@ -12,5 +12,6 @@ doc
 .ruby-version
 .yardoc
 *.log
-.helperfile
-.tempfile
+*.helperfile
+*.tempfile
+tests
