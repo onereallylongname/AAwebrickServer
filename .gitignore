@@ -1,0 +1,16 @@
+.yardoc
+.idea
+*.gem
+.bundle
+Gemfile.lock
+pkg/*
+.rvmrc
+.rspec
+*.pem
+.DS_STORE
+doc
+.ruby-version
+.yardoc
+*.log
+.helperfile
+.tempfile
