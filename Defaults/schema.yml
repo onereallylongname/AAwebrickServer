@@ -1,0 +1,17 @@
+---
+Server:
+  RootDir: :pathR
+  CertDir: :fileR
+  PkeyDir: :fileR
+  LoggingLevel: :debugLevelR
+  AccessLogFile: :fileR
+  ServerLogFile: :fileR
+  Port: :intR
+  MonitorInterval: :intR
+  ServicesPath: :mapR
+Session:
+  TimeToLive: :intR
+  MaxSessions: :intR
+  LogFile: :fileR
+  Masters: :array_
+Tools: :mapR

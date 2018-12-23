@@ -3,22 +3,22 @@ require './lib/aaServer/AAJira'
 
 describe 'AAJira' do
   describe "#login" do
-    context "Passing Test" do
-      it "returns a Jira::Client" do
-        jiraUser  = 'antonio.miguel.almeida@celfocus.com'
-        jiraPass  = '-'
-        jiraOwner = 'Celfocus'
-        client = AAJira.login jiraUser, jiraPass, jiraOwner
-        expect(client).to be_kind_of JIRA::Client
-      end
-      it "Has no lastError" do
-        lastError = AAJira.lastError
-        expect(lastError).to eq ''
-      end
-    end
+    # context "Passing Test" do
+    #   it "returns a Jira::Client" do
+    #     jiraUser  = 'kljh'
+    #     jiraPass  = '-'
+    #     jiraOwner = 'Celfocus'
+    #     client = AAJira.login jiraUser, jiraPass, jiraOwner
+    #     expect(client).to be_kind_of JIRA::Client
+    #   end
+    #   it "Has no lastError" do
+    #     lastError = AAJira.lastError
+    #     expect(lastError).to eq ''
+    #   end
+    # end
     context "Faling Test - login is Invalid" do
       it "returns a nil" do
-        jiraUser  = 'antonio.miguel.almeida@celfocus.com'
+        jiraUser  = 'hjd'
         jiraPass  = ''
         jiraOwner = 'Celfocus'
         testReturn = AAJira.login jiraUser, jiraPass, jiraOwner

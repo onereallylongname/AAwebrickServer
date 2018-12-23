@@ -8,41 +8,7 @@ require 'jira-ruby'
 class AAJira
   @@lastError = ''
 # Defaul configs
-  @@configs = {"Celfocus"=>
-                {"Site"=>"https://celfocusjira.atlassian.net:443",
-                 "ProjectName"=>"VFGBNOCCIA",
-                 "Component"=>"Automation",
-                 "QueryFields"=>
-                  {"status"=>"status",
-                   "installationNotes"=>"customfield_10066",
-                   "summary"=>"summary",
-                   "issuetype"=>"issuetype",
-                   "assignee"=>"assignee"},
-                  "NewLineChar" => '\n',
-                  'DeployStatus' => [
-                      'Resolved',
-                      'Ready For Deploy'
-                    ],
-                   "Deliverables" => [
-                     'Runbooks',
-                     'Action Tasks',
-                     'Properties',
-                     'Gateway Filters',
-                     'Job Schedulers',
-                     'DB Scripts',
-                     'Gateway Filters'
-                   ],
-                   "ResolveDeliverables" =>[
-                     'Runbooks',
-                     'Action Tasks',
-                     'Properties',
-                   ]
-                },
-               "Vodafone"=>
-                {"Site"=>"https://cias.jira.agile.vodafone.com:443",
-                  "ProjectName"=>"CIAS"
-                }
-              }
+  @@configs = Hash.new
 # Set configurations
 #
   def self.configs= (conf)
